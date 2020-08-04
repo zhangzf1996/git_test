@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>流动线条实现</title>
+    <style type="text/css">
+        .line-hor {
+            position: absolute;
+            width: 320px;
+            height: 2px;
+            overflow: hidden;
+            top: 14vh;
+            left: 9vw;
+        }
+        .swrap-line {
+            width: 68px;
+            height: 2px;
+            /* background: linear-gradient(90deg, rgba(24, 144, 255, 0) 0 #1890ff); */
+            background: linear-gradient(90deg, rgba(24, 144, 255, 0) 0, #1890ff);
+            animation: line 2s ease-in-out infinite;
+        }
+        @keyframes line {
+            0% {
+              transform: translateX(-68px);  
+            }
+            100% {
+                transform: translateX(400px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="line-hor">
+        <div class="swrap-line"></div>
+    </div>
+</body>
+</html>
